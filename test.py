@@ -4,6 +4,7 @@ gamelist = ["rock", "paper", "scissors"]
 machine = gamelist[randint(0,2)]
 player = False
 
+print ()
 print ("Welcome to the game 'Rock-Paper-Scissors' written with Python3 by Yasen Kostov")
 time.sleep(5)
 print ()
