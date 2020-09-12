@@ -1,4 +1,4 @@
-##Rock-Paper-Scissors game
+## Rock-Paper-Scissors game
 
 *To play run test.py in your terminal like that:*
 ```
