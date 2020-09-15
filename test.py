@@ -3,6 +3,7 @@ import time
 gamelist = ["rock", "paper", "scissors"]
 machine = gamelist[randint(0,2)]
 player = False
+againplayer = False
 
 print ()
 print ("Welcome to the game 'Rock-Paper-Scissors' written with Python3 by Yasen Kostov")
@@ -44,6 +45,8 @@ while player == False:
         print ("Something went wrong.. Be sure to answer me only with 'rock', 'paper' or 'scissors'")
     print ()
     time.sleep(5)
+
+
     again = input("You wanna try again? (yes, no): ")
     if again == "yes":
         print ()
@@ -53,14 +56,31 @@ while player == False:
         print ()
         print ("Ok! Goodbye then!")
         time.sleep(2)
+
     else:
-        print ()
-        time.sleep(1)
-        print ("Uh..")
-        time.sleep(1)
-        print ("Are you absolutely sure you told me what I need to?")
-        time.sleep(3)
-        print ()
-        print ("Never mind.. Goodbye!")
+
+        while againplayer == False:
+            print ()
+            time.sleep(1)
+            print ("Uh..")
+            time.sleep(1)
+            print ("Are you absolutely sure you told me what I need to?")
+            time.sleep(3)
+            print ()
+            again2 = input("Want one more shot? (yes, no): ")
+            if again2 == "yes":
+                print ()
+                player = False
+                againplayer = True
+                machine = gamelist[randint(0,2)]
+                time.sleep(2)
+            elif again == "no":
+                print ()
+                print ("Ok, goodbye!")
+            else:
+                print ()
+                againplayer = False
+                machine == gamelist[randint(0,2)]
+
 
 # Written by Yasen Kostov
